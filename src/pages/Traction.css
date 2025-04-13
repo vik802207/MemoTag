@@ -1,0 +1,98 @@
+.traction-section {
+    padding: 6rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .traction-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .traction-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    transition: all 0.3s ease;
+  }
+  /* Light mode styles */
+.light-mode {
+    background: linear-gradient(135deg, #e0f2fe, #f0f9ff); /* soft blue gradient */
+    color: #1f2937;
+  }
+  
+  .light-mode .traction-title {
+    color: #0ea5e9; /* Tailwind sky-500 */
+  }
+  
+  .light-mode .stat {
+    background: #794646 !important;
+    color: #1f2937;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .light-mode .stat:hover {
+    background: #f3f4f6;
+  }
+  
+  
+  /* Dark mode styles */
+  .dark-mode {
+    background: linear-gradient(135deg, #1a1a2e, #2c2c3e);
+    color: #ffffff;
+  }
+  
+  .dark-mode .traction-title {
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .dark-mode .stat {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dark-mode .stat:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .stats {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  
+  .stat {
+    padding: 2rem;
+    border-radius: 20px;
+    width: 280px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .stat-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .stat h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  .stat p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  

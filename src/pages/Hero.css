@@ -1,0 +1,114 @@
+/* Global Hero Section Styles */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1; /* Light background */
+    color: #333; /* Light text */
+    overflow: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  
+  /* Hero Content */
+  .hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Hero Text */
+  .hero-text {
+    max-width: 500px;
+    z-index: 2;
+    text-align: left;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    transition: color 0.4s ease;
+  }
+  
+  .hero-text h1 span {
+    color: #ff416c; /* Accent color for emphasis */
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .cta-button {
+    padding: 12px 30px;
+    background-color: #ff416c;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff4b2b;
+    transform: scale(1.05);
+  }
+  
+  /* Hero Image */
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 15px;
+  }
+  
+  /* Background Blur Circle */
+  .blur-circle {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  
+  /* Dark Mode Styles */
+  .hero.dark {
+    background-color: #121212; /* Dark background */
+    color: #f5f5f5; /* Light text for dark mode */
+  }
+  
+  .hero.dark .hero-text h1 {
+    color: #f5f5f5; /* Light text color */
+  }
+  
+  .hero.dark .hero-text p {
+    color: #bbb; /* Light text color for paragraph */
+  }
+  
+  .hero.dark .cta-button {
+    background-color: #ff416c; /* Accent color for button */
+  }
+  
+  .hero.dark .cta-button:hover {
+    background-color: #ff4b2b; /* Slightly different hover color */
+  }
+  
+  .hero.dark .blur-circle {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter blur effect */
+  }
+  

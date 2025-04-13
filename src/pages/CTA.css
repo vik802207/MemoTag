@@ -1,0 +1,154 @@
+/* General CTA Section Styles */
+.cta {
+    position: relative;
+    background: linear-gradient(135deg, var(--cta-light-bg-start), var(--cta-light-bg-end));
+    padding: 6rem 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    margin: 2rem;
+    transition: all 0.3s ease;
+}
+
+.cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.1), transparent);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.cta-content {
+    max-width: 720px;
+    margin: 0 auto;
+    color: white;
+}
+
+.cta-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    background: linear-gradient(to right, var(--cta-title-light-start), var(--cta-title-light-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Ensure the title is visible in light mode */
+body:not(.dark-mode) .cta-title {
+    background: linear-gradient(to right, #ffffff, #d1d5db); /* Light gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Ensure the title is visible in dark mode */
+body.dark-mode .cta-title {
+    background: linear-gradient(to right, #4f9cf0, #a3b9ff); /* Dark gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cta-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 400;
+    opacity: 0.95;
+    margin-bottom: 2.5rem;
+    color: #e0e7ff;
+}
+
+.cta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.cta-input {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 420px;
+    transition: all 0.3s ease;
+}
+
+.cta-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-input:focus {
+    outline: none;
+    border-color: white;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.cta-button {
+    background: white;
+    color: #3b82f6;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #f3f4f6;
+    color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+    .cta-form {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cta-input {
+        flex: 1;
+    }
+}
+
+/* Dark Mode */
+body.dark-mode .cta {
+    background: linear-gradient(135deg, var(--cta-dark-bg-start), var(--cta-dark-bg-end));
+}
+
+body.dark-mode .cta-content {
+    color: var(--cta-dark-text-color);
+}
+
+body.dark-mode .cta-subtitle {
+    color: var(--cta-dark-subtitle-color);
+}
+
+/* Define CSS Variables */
+:root {
+    /* Light Mode Variables */
+    --cta-light-bg-start: #3b82f6;
+    --cta-light-bg-end: #6366f1;
+    --cta-title-light-start: #ffffff;
+    --cta-title-light-end: #d1d5db;
+    --cta-text-color: #ffffff;
+    --cta-subtitle-color: #e0e7ff;
+
+    /* Dark Mode Variables */
+    --cta-dark-bg-start: #1f2937;
+    --cta-dark-bg-end: #2d3748;
+    --cta-dark-text-color: #e2e8f0;
+    --cta-title-dark-start: #4f9cf0;
+    --cta-title-dark-end: #a3b9ff;
+    --cta-dark-subtitle-color: #cbd5e0;
+}
